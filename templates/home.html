@@ -14,12 +14,19 @@
     </style>
   </head>
   <body>
+    {% include "nav.html" %}
+      <img class="img-fluid" id="banner" src="/static/jovian career splash.jpg">
     <div class="container">
-      <h1 class="text-center mt-2 mb-4">{{company_name}}</h1>
-      <img class="img-fluid" id="banner" src="https://jovian-careers-website.tvstetten.repl.co/static/jovian career splash.jpg">
       <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-      <p class="lead">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+      <div class="row" style="margin-bottom:16px;">
+        <div class="col-md-6">
+          <p class="lead">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.           </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img src="static/people.jpg" style="height:300px;border-radius:4px" >
+        </div>
+      </div>
       <h2 class="text-center mt-2 mb-4">Open positions</h2>
       <p>
         {% for job in jobs %}
@@ -27,9 +34,9 @@
         {% endfor %}
         </p>
         <div class="text-center">
-          <button class="btn btn-primary btn-large">Contact Us</button>
-          <p class="mt-4">Copyright 2023, Thomas von Stetten</p>
+          <a href="mailto:tvstetten@tvs-soft.de?subject=Question%20about%20job%20openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20question%3A%20%3Center%20question%20here%3E%0D%0A" class="btn btn-primary btn-large">Contact Us</a>
         </div>
       </div>
+    {% include "footer.html" %}
   </body>
 </html>
