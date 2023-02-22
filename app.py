@@ -27,6 +27,10 @@ def apply_to_job(id):
   # return jsonify(data)
   return render_template("application_submitted.html", application=application, job=job)
 
+@app.route("/api/job/<id>")
+def api_job_json(id):
+  return jsonify(load_job_from_db(id))
+
 @app.route("/api/jobs")
 def api_jobs_json():
   return jsonify(load_jobs_from_db())
